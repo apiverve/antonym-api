@@ -12,7 +12,6 @@ namespace APIVerve.API.AntonymFinder
     {
         /// <summary>
         /// The word to get the antonyms for
-        /// Example: happy
         /// </summary>
         [JsonProperty("word")]
         public string Word { get; set; }
