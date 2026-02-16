@@ -223,8 +223,9 @@ from apiverve_antonymfinder.apiClient import AntonymAPIClient
 
 api = AntonymAPIClient("[YOUR_API_KEY]")
 
+query = { "word": "happy" }
+
 try:
-    query = { "word": "happy" }
     result = api.execute(query)
     print(result)
 finally:
