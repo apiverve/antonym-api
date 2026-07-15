@@ -123,12 +123,13 @@ async function makeRequest() {
   "error": null,
   "data": {
     "word": "happy",
+    "language": "en",
     "antonyms": [
       "sad",
       "unhappy",
       "miserable",
       "depressed",
-      "gloomy"
+      "glum"
     ]
   }
 }
