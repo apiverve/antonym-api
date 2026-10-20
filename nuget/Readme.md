@@ -1,13 +1,12 @@
-AntonymFinder API
+Antonym Finder API
 ============
 
-Antonym is a simple tool for getting the antonyms of a word. It returns a list of antonyms for the given word.
+Antonym Finder is an antonym lookup API that finds words with opposite meanings along with their parts of speech across supported languages. Pass any term and an optional language code to receive an array of antonyms.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a .NET Wrapper for the [AntonymFinder API](https://antonym.apiverve.com?utm_source=nuget&utm_medium=readme)
+[![NuGet version](https://img.shields.io/nuget/v/APIVerve.API.AntonymFinder.svg)](https://www.nuget.org/packages/APIVerve.API.AntonymFinder)
+
+This is a .NET wrapper for the [Antonym Finder API](https://apiverve.com/marketplace/antonym?utm_source=nuget&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -40,8 +39,8 @@ From within Visual Studio:
 
 ## Configuration
 
-Before using the antonym API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=nuget&utm_medium=readme)
+Before using the Antonym Finder API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=nuget&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -61,8 +60,9 @@ class Program
         var apiClient = new AntonymFinderAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new AntonymFinderQueryOptions {
-    Word = "happy"
-};
+            Word = "happy",
+            Language = "Spanish"
+        };
 
         // Make the API call
         try
@@ -92,13 +92,13 @@ class Program
 
 ## Usage
 
-The AntonymFinder API documentation is found here: [https://docs.apiverve.com/ref/antonym](https://docs.apiverve.com/ref/antonym?utm_source=nuget&utm_medium=readme).
+The Antonym Finder API documentation is found here: [https://docs.apiverve.com/ref/antonym](https://docs.apiverve.com/ref/antonym?utm_source=nuget&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
 
 ###### Authentication
-AntonymFinder API uses API Key-based authentication. When you create an instance of the API client, you can pass your API Key as a parameter.
+Antonym Finder API uses API Key-based authentication. When you create an instance of the API client, you can pass your API Key as a parameter.
 
 ```csharp
 // Create an instance of the API client
@@ -125,8 +125,9 @@ public class Example
         var apiClient = new AntonymFinderAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new AntonymFinderQueryOptions {
-    Word = "happy"
-};
+            Word = "happy",
+            Language = "Spanish"
+        };
 
         var response = await apiClient.ExecuteAsync(queryOptions);
 
@@ -157,8 +158,9 @@ public class Example
         var apiClient = new AntonymFinderAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new AntonymFinderQueryOptions {
-    Word = "happy"
-};
+            Word = "happy",
+            Language = "Spanish"
+        };
 
         var response = apiClient.Execute(queryOptions);
 
@@ -194,8 +196,9 @@ public class Example
         var apiClient = new AntonymFinderAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new AntonymFinderQueryOptions {
-    Word = "happy"
-};
+            Word = "happy",
+            Language = "Spanish"
+        };
 
         try
         {
@@ -250,8 +253,9 @@ public class Example
         apiClient.SetRetryDelay(2000);     // Wait 2 seconds between retries
 
         var queryOptions = new AntonymFinderQueryOptions {
-    Word = "happy"
-};
+            Word = "happy",
+            Language = "Spanish"
+        };
 
         try
         {
@@ -291,7 +295,8 @@ apiClient.AddCustomHeader("X-Custom-Header", "custom-value");
 apiClient.AddCustomHeader("X-Request-ID", Guid.NewGuid().ToString());
 
 var queryOptions = new AntonymFinderQueryOptions {
-    Word = "happy"
+    Word = "happy",
+    Language = "Spanish"
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -317,7 +322,8 @@ apiClient.SetLogger(message =>
 });
 
 var queryOptions = new AntonymFinderQueryOptions {
-    Word = "happy"
+    Word = "happy",
+    Language = "Spanish"
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -335,7 +341,8 @@ apiClient.SetMaxRetries(3);           // Retry up to 3 times (default: 0, max: 3
 apiClient.SetRetryDelay(1500);        // Wait 1.5 seconds between retries (default: 1000ms)
 
 var queryOptions = new AntonymFinderQueryOptions {
-    Word = "happy"
+    Word = "happy",
+    Language = "Spanish"
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -347,7 +354,8 @@ The API client implements `IDisposable` for proper resource cleanup:
 
 ```csharp
 var queryOptions = new AntonymFinderQueryOptions {
-    Word = "happy"
+    Word = "happy",
+    Language = "Spanish"
 };
 
 using (var apiClient = new AntonymFinderAPIClient("[YOUR_API_KEY]"))
@@ -367,6 +375,7 @@ using (var apiClient = new AntonymFinderAPIClient("[YOUR_API_KEY]"))
   "status": "ok",
   "error": null,
   "data": {
+    "partOfSpeech": "adjective",
     "word": "happy",
     "language": "en",
     "antonyms": [
@@ -384,7 +393,7 @@ using (var apiClient = new AntonymFinderAPIClient("[YOUR_API_KEY]"))
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=nuget&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=nuget&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -395,12 +404,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=nuget&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=nuget&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 

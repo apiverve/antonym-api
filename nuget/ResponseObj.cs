@@ -32,6 +32,9 @@ namespace APIVerve.API.AntonymFinder
 
     public partial class Data
     {
+        [JsonProperty("partOfSpeech")]
+        public string PartOfSpeech { get; set; }
+
         [JsonProperty("word")]
         public string Word { get; set; }
 

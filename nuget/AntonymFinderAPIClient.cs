@@ -67,7 +67,8 @@ namespace APIVerve.API.AntonymFinder
         /// <summary>Validation rules for parameters</summary>
         private static readonly Dictionary<string, ValidationRule> _validationRules = new Dictionary<string, ValidationRule>
         {
-            { "word", new ValidationRule { Type = "string", Required = true } }
+            { "word", new ValidationRule { Type = "string", Required = true } },
+            { "language", new ValidationRule { Type = "string", Required = false } }
         };
 
         /// <summary>Format validation patterns</summary>

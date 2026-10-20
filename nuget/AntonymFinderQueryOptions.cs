@@ -15,5 +15,11 @@ namespace APIVerve.API.AntonymFinder
         /// </summary>
         [JsonProperty("word")]
         public string Word { get; set; }
+
+        /// <summary>
+        /// Language to return the antonyms in. Defaults to English
+        /// </summary>
+        [JsonProperty("language")]
+        public string Language { get; set; }
     }
 }
