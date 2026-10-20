@@ -1,13 +1,13 @@
-# [Antonym Finder API](https://antonym.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [Antonym Finder API](https://apiverve.com/marketplace/antonym?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-Antonym is a simple tool for getting the antonyms of a word. It returns a list of antonyms for the given word.
+Antonym Finder is an antonym lookup API that finds words with opposite meanings along with their parts of speech across supported languages. Pass any term and an optional language code to receive an array of antonyms.
 
 The Antonym Finder API provides a simple, reliable way to integrate antonym finder functionality into your applications. Built for developers who need production-ready antonym finder capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://antonym.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/antonym?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://antonym.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/antonym?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-GET-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -31,7 +31,8 @@ The Antonym Finder API provides a simple, reliable way to integrate antonym find
 async function callAntonymFinderAPI() {
     try {
         const params = new URLSearchParams({
-            word: 'happy'
+            word: 'happy',
+            language: 'Spanish'
         });
 
         const response = await fetch(`https://api.apiverve.com/v1/antonym?${params}`, {
@@ -54,7 +55,7 @@ callAntonymFinderAPI();
 ### Using cURL
 
 ```bash
-curl -X GET "https://api.apiverve.com/v1/antonym?word=happy" \
+curl -X GET "https://api.apiverve.com/v1/antonym?word=happy&language=Spanish" \
   -H "x-api-key: YOUR_API_KEY_HERE"
 ```
 
@@ -161,7 +162,7 @@ go get github.com/apiverve/antonym-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [Antonym Finder API](https://antonym.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [Antonym Finder API](https://apiverve.com/marketplace/antonym?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/antonym](https://docs.apiverve.com/ref/antonym)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -211,6 +212,7 @@ A real response from the Antonym Finder API:
   "status": "ok",
   "error": null,
   "data": {
+    "partOfSpeech": "adjective",
     "word": "happy",
     "language": "en",
     "antonyms": [
@@ -228,7 +230,7 @@ A real response from the Antonym Finder API:
 
 ## Support & Community
 
-- 🏠 **API Home**: [Antonym Finder API](https://antonym.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [Antonym Finder API](https://apiverve.com/marketplace/antonym?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)

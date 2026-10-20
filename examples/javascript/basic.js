@@ -15,7 +15,8 @@ async function callAntonymFinderAPI() {
   try {
     // Query parameters
     const params &#x3D; new URLSearchParams({
-            word: &#x27;happy&#x27;
+            word: &#x27;happy&#x27;,
+            language: &#x27;Spanish&#x27;
         });
 
     const response = await fetch(`${API_URL}?${params}`, {

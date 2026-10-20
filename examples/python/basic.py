@@ -18,7 +18,7 @@ def call_antonym_api():
     """
     try:
         # Query parameters
-        params &#x3D; {&#x27;word&#x27;: &#x27;happy&#x27;}
+        params &#x3D; {&#x27;word&#x27;: &#x27;happy&#x27;, &#x27;language&#x27;: &#x27;Spanish&#x27;}
 
         headers = {
             'x-api-key': API_KEY
