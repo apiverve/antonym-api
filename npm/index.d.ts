@@ -25,9 +25,10 @@ declare module '@apiverve/antonym' {
 
 
   interface AntonymFinderData {
-      word:     null | string;
-      language: null | string;
-      antonyms: (null | string)[];
+      partOfSpeech: null | string;
+      word:         null | string;
+      language:     null | string;
+      antonyms:     (null | string)[];
   }
 
   export default class antonymWrapper {

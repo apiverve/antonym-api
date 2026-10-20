@@ -15,7 +15,8 @@ const api = new antonymAPI({
 
 // Example query
 var query = {
-  word: "happy"
+  word: "happy",
+  language: "Spanish"
 };
 
 // Make the API request using callback

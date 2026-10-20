@@ -30,7 +30,7 @@ class antonymWrapper {
         this.baseURL = 'https://api.apiverve.com/v1/antonym';
 
         // Validation rules for parameters (generated from schema)
-        this.validationRules = {"word":{"type":"string","required":true}};
+        this.validationRules = {"word":{"type":"string","required":true},"language":{"type":"string","required":false}};
     }
 
     /**
