@@ -1,6 +1,6 @@
 # Antonym Finder API - PHP Package
 
-Antonym is a simple tool for getting the antonyms of a word. It returns a list of antonyms for the given word.
+Antonym Finder is an antonym lookup API that finds words with opposite meanings along with their parts of speech across supported languages. Pass any term and an optional language code to receive an array of antonyms.
 
 ## Installation
 
@@ -27,7 +27,10 @@ use APIVerve\Antonym\Client;
 $client = new Client('YOUR_API_KEY');
 
 // Make a request
-$response = $client->execute(['word' => 'happy']);
+$response = $client->execute([
+    'word' => 'happy',
+    'language' => 'Spanish'
+]);
 
 // Print the response
 print_r($response);
@@ -42,7 +45,7 @@ use APIVerve\Antonym\Exceptions\APIException;
 use APIVerve\Antonym\Exceptions\ValidationException;
 
 try {
-    $response = $client->execute(['word' => 'happy']);
+    $response = $client->execute(['word' => 'happy', 'language' => 'Spanish']);
     print_r($response['data']);
 } catch (ValidationException $e) {
     echo "Validation error: " . implode(', ', $e->getErrors());
@@ -69,6 +72,7 @@ $client = new Client(
   "status": "ok",
   "error": null,
   "data": {
+    "partOfSpeech": "adjective",
     "word": "happy",
     "language": "en",
     "antonyms": [
@@ -89,11 +93,11 @@ $client = new Client(
 
 ## Documentation
 
-For more information, visit the [API Documentation](https://docs.apiverve.com/ref/antonym?utm_source=packagist&utm_medium=readme).
+For more information, visit the [API Documentation](https://docs.apiverve.com/ref/antonym?utm_source=packagist&utm_medium=referral&utm_content=readme).
 
 ## Support
 
-- Website: [https://antonym.apiverve.com?utm_source=php&utm_medium=readme](https://antonym.apiverve.com?utm_source=php&utm_medium=readme)
+- Website: [https://apiverve.com/marketplace/antonym?utm_source=php&utm_medium=referral&utm_content=readme](https://apiverve.com/marketplace/antonym?utm_source=php&utm_medium=referral&utm_content=readme)
 - Email: hello@apiverve.com
 
 ## License

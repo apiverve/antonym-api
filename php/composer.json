@@ -1,7 +1,7 @@
 {
     "name": "apiverve/antonym",
-    "description": "Antonym is a simple tool for getting the antonyms of a word. It returns a list of antonyms for the given word.",
-    "version": "1.2.0",
+    "description": "Antonym Finder is an antonym lookup API that finds words with opposite meanings along with their parts of speech across supported languages. Pass any term and an optional language code to receive an array of antonyms.",
+    "version": "1.2.2",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -15,13 +15,13 @@
         "api",
         "apiverve",
         "antonym",
-        "antonym",
         "antonym api",
-        "antonym tool",
-        "antonym software",
-        "antonym service"
+        "antonym lookup",
+        "antonym finder",
+        "free antonym api",
+        "antonym database"
     ],
-    "homepage": "https://antonym.apiverve.com?utm_source=php&utm_medium=homepage",
+    "homepage": "https://apiverve.com/marketplace/antonym?utm_source=php&utm_medium=referral&utm_content=homepage",
     "support": {
         "email": "hello@apiverve.com",
         "docs": "https://docs.apiverve.com/ref/antonym",

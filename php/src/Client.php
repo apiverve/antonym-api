@@ -15,11 +15,11 @@ use APIVerve\Antonym\Exceptions\ValidationException;
  * @example Basic usage
  * ```php
  * $client = new Client('your_api_key');
- * $response = $client->execute(['word' => 'happy']);
+ * $response = $client->execute(['word' => 'happy', 'language' => 'Spanish']);
  * print_r($response);
  * ```
  *
- * @see https://antonym.apiverve.com?utm_source=php&utm_medium=readme
+ * @see https://apiverve.com/marketplace/antonym?utm_source=php&utm_medium=referral&utm_content=readme
  */
 class Client
 {
@@ -34,7 +34,8 @@ class Client
      * Validation rules for parameters
      */
     private const VALIDATION_RULES = [
-        'word' => ['type' => 'string', 'required' => true]
+        'word' => ['type' => 'string', 'required' => true],
+        'language' => ['type' => 'string', 'required' => false]
     ];
 
     /**
