@@ -46,10 +46,11 @@ final _formatPatterns = {
 
 /// Antonym Finder API client.
 ///
-/// For more information, visit: https://antonym.apiverve.com?utm_source=dart&utm_medium=readme
+/// For more information, visit: https://apiverve.com/marketplace/antonym?utm_source=dart&utm_medium=referral&utm_content=readme
 ///
 /// Parameters:
 /// * [word] (required) - The word to get the antonyms for
+/// * [language] - Language to return the antonyms in. Defaults to English
 class AntonymClient {
   final String apiKey;
   final String baseUrl;
@@ -58,6 +59,7 @@ class AntonymClient {
   /// Validation rules for parameters.
   static final Map<String, ValidationRule> _validationRules = <String, ValidationRule>{
     'word': ValidationRule(type: 'string', required: true),
+    'language': ValidationRule(type: 'string', required: false),
   };
 
   AntonymClient(this.apiKey, {

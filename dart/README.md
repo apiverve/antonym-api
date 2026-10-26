@@ -1,11 +1,11 @@
 # Antonym Finder API - Dart/Flutter Client
 
-Antonym is a simple tool for getting the antonyms of a word. It returns a list of antonyms for the given word.
+Antonym Finder is an antonym lookup API that finds words with opposite meanings along with their parts of speech across supported languages. Pass any term and an optional language code to receive an array of antonyms.
 
 [![pub package](https://img.shields.io/pub/v/apiverve_antonym.svg)](https://pub.dev/packages/apiverve_antonym)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This is the Dart/Flutter client for the [Antonym Finder API](https://antonym.apiverve.com?utm_source=dart&utm_medium=readme).
+This is the Dart/Flutter client for the [Antonym Finder API](https://apiverve.com/marketplace/antonym?utm_source=dart&utm_medium=referral&utm_content=readme).
 
 ## Installation
 
@@ -13,7 +13,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  apiverve_antonym: ^1.1.14
+  apiverve_antonym: ^1.2.3
 ```
 
 Then run:
@@ -34,7 +34,8 @@ void main() async {
 
   try {
     final response = await client.execute({
-      'word': 'happy'
+      'word': 'happy',
+      'language': 'Spanish'
     });
 
     print('Status: ${response.status}');
@@ -52,13 +53,15 @@ void main() async {
   "status": "ok",
   "error": null,
   "data": {
+    "partOfSpeech": "adjective",
     "word": "happy",
+    "language": "en",
     "antonyms": [
       "sad",
       "unhappy",
       "miserable",
       "depressed",
-      "gloomy"
+      "glum"
     ]
   }
 }
@@ -66,12 +69,12 @@ void main() async {
 
 ## API Reference
 
-- **API Home:** [Antonym Finder API](https://antonym.apiverve.com?utm_source=dart&utm_medium=readme)
-- **Documentation:** [docs.apiverve.com/ref/antonym](https://docs.apiverve.com/ref/antonym?utm_source=dart&utm_medium=readme)
+- **API Home:** [Antonym Finder API](https://apiverve.com/marketplace/antonym?utm_source=dart&utm_medium=referral&utm_content=readme)
+- **Documentation:** [docs.apiverve.com/ref/antonym](https://docs.apiverve.com/ref/antonym?utm_source=dart&utm_medium=referral&utm_content=readme)
 
 ## Authentication
 
-All requests require an API key. Get yours at [apiverve.com](https://apiverve.com?utm_source=dart&utm_medium=readme).
+All requests require an API key. Get yours at [apiverve.com](https://apiverve.com?utm_source=dart&utm_medium=referral&utm_content=readme).
 
 ## License
 
@@ -79,4 +82,4 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
-Built with Dart for [APIVerve](https://apiverve.com?utm_source=dart&utm_medium=readme)
+Built with Dart for [APIVerve](https://apiverve.com?utm_source=dart&utm_medium=referral&utm_content=readme)
