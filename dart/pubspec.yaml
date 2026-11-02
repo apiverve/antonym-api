@@ -1,6 +1,6 @@
 name: apiverve_antonym
 description: "Antonym Finder is an antonym lookup API that finds words with opposite meanings along with their parts of speech across supported languages. Pass any term and an optional language code to receive an array of antonyms."
-version: 1.2.3
+version: 1.2.4
 homepage: https://apiverve.com/marketplace/antonym?utm_source=dart&utm_medium=referral&utm_content=homepage
 repository: https://github.com/apiverve/antonym-api/tree/main/dart
 
