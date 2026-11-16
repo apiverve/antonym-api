@@ -13,7 +13,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  apiverve_antonym: ^1.2.5
+  apiverve_antonym: ^1.2.6
 ```
 
 Then run:
